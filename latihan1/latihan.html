@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/fungsi.js"></script>
+</head>
+
+<body>
+    <!-- Membuat canvas untuk menggambar lingkaran  -->
+    <canvas id="tempat" height="400" width="400" style="border:2px solid;"></canvas>
+    <!--  -->
+    <!-- JS -->
+    <script>
+        var gambar = document.querySelector("#tempat");
+        var con = gambar.getContext("2d");
+        var imgdata = con.getImageData(0, 0, gambar.height, gambar.width);
+
+        
+        lingkaran(imgdata,200,200,70,255,0,0);
+
+        con.putImageData(imgdata, 0,0 );
+    </script>
+    <!-- end -->
+
+</body>
+
+</html>
